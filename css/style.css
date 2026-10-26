@@ -1,0 +1,55 @@
+/* Phone and narrow viewport first */
+
+.container {
+	width: 100%;
+}
+
+.content {
+	padding: 1rem;
+}
+
+.content h1 {
+	grid-column: 1 / -1;
+}
+
+.content p {
+	margin: 2;
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+.cards img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Tablet-sized space becomes available */
+
+@media (min-width: 768px) {
+	.content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.cards {
+		flex-direction: row;
+	}
+
+	.cards img {
+		flex: 1;
+		min-width: 0;
+	}
+}
+
+/* Laptop-sized space becomes available */
+
+@media (min-width: 1024px) {
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+}
